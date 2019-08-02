@@ -2,14 +2,26 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>compileBitcode</key>
+	<true/>
+	<key>destination</key>
+	<string>export</string>
 	<key>method</key>
 	<string>development</string>
 	<key>provisioningProfiles</key>
 	<dict>
-		<key>com.lgcoder.cooci.cn</key>
-		<string>com.saicmotor.iov.india</string>
+		<key>com.saicmotor.ThailandInternetCar</key>
+		<string>dev_india-2</string>
 	</dict>
-	<key>app identifier</key>
-	<string>com.saicmotor.iov.india</string>
+	<key>signingCertificate</key>
+	<string>iPhone Developer</string>
+	<key>signingStyle</key>
+	<string>manual</string>
+	<key>stripSwiftSymbols</key>
+	<true/>
+	<key>teamID</key>
+	<string>VR2YYJC2YV</string>
+	<key>thinning</key>
+	<string>&lt;none&gt;</string>
 </dict>
 </plist>
