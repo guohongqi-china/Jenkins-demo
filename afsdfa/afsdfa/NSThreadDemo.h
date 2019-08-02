@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark --  信号量加锁 数据安全
 - (void)producerFunc;
 #pragma mark --  任务依赖
-- (void)queueDependenc
+- (void)queueDependenc;
 
 @end
 
