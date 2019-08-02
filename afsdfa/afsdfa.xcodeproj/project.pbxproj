@@ -11,7 +11,6 @@
 		3E13897822F4229800CF909B /* NSThreadDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E13897722F4229800CF909B /* NSThreadDemo.m */; };
 		3E2C237822F0410100B1DAF2 /* guohq.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2C237722F0410100B1DAF2 /* guohq.m */; };
 		3E9AA47F22F2732200AD5A53 /* MGTestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AA47E22F2732200AD5A53 /* MGTestOperation.m */; };
-		3EACF50122E15FCD00521731 /* LibLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EACF50022E15FCD00521731 /* LibLog.framework */; };
 		3EE5AAA022C0A52F001F3B29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5AA9F22C0A52F001F3B29 /* AppDelegate.m */; };
 		3EE5AAA322C0A52F001F3B29 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5AAA222C0A52F001F3B29 /* ViewController.m */; };
 		3EE5AAA622C0A52F001F3B29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EE5AAA422C0A52F001F3B29 /* Main.storyboard */; };
@@ -49,7 +48,6 @@
 		3E9AA47D22F2732200AD5A53 /* MGTestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGTestOperation.h; sourceTree = "<group>"; };
 		3E9AA47E22F2732200AD5A53 /* MGTestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGTestOperation.m; sourceTree = "<group>"; };
 		3E9AA48022F27D4800AD5A53 /* MGTestProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGTestProtocol.h; sourceTree = "<group>"; };
-		3EACF50022E15FCD00521731 /* LibLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LibLog.framework; sourceTree = "<group>"; };
 		3EE5AA9B22C0A52F001F3B29 /* afsdfa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = afsdfa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE5AA9E22C0A52F001F3B29 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3EE5AA9F22C0A52F001F3B29 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EACF50122E15FCD00521731 /* LibLog.framework in Frameworks */,
 				1C2DA1EA69263A4A5C0B4E6C /* libPods-afsdfa.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,7 +140,6 @@
 				3EE5AAA722C0A531001F3B29 /* Assets.xcassets */,
 				3EE5AAA922C0A531001F3B29 /* LaunchScreen.storyboard */,
 				3EE5AAAC22C0A531001F3B29 /* Info.plist */,
-				3EACF50022E15FCD00521731 /* LibLog.framework */,
 				3EE5AAAD22C0A531001F3B29 /* main.m */,
 			);
 			path = afsdfa;
