@@ -10,7 +10,6 @@
 #import <objc/runtime.h>
 #import "SViewController.h"
 #import "guohq.h"
-#import <LibLog/LibLog.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <SDWebImage/SDWebImage.h>
 #import "MGTestOperation.h"
