@@ -1,0 +1,6 @@
+framework module LibLog {
+  umbrella header "LibLog.h"
+
+  export *
+  module * { export * }
+}
