@@ -3,16 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>app identifier</key>
-	<string>com.saicmotor.iov.india</string>
+	<string></string>
 	<key>compileBitcode</key>
-	<false/>
+	<true/>
+	<key>destination</key>
+	<string>export</string>
 	<key>method</key>
 	<string>development</string>
-	<key>provisioningProfiles</key>
-	<dict>
-		<key>com.saicmotor.iov.india</key>
-		<string>dev_india-2</string>
-	</dict>
+	<key>signingCertificate</key>
+	<string>iPhone Developer</string>
 	<key>signingStyle</key>
 	<string>manual</string>
 	<key>stripSwiftSymbols</key>
@@ -21,5 +20,10 @@
 	<string>VR2YYJC2YV</string>
 	<key>thinning</key>
 	<string>&lt;none&gt;</string>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>com.saicmotor.iov.india</key>
+		<string></string>
+	</dict>
 </dict>
 </plist>
