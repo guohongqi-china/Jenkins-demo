@@ -23,7 +23,7 @@
 	<key>provisioningProfiles</key>
 	<dict>
 		<key>com.saicmotor.iov.india</key>
-		<string></string>
+		<string>dev_india</string>
 	</dict>
 </dict>
 </plist>
