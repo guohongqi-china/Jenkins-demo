@@ -10,6 +10,7 @@
 		1C2DA1EA69263A4A5C0B4E6C /* libPods-afsdfa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C06E82FAC92DD6BE1D56C574 /* libPods-afsdfa.a */; };
 		3E13897822F4229800CF909B /* NSThreadDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E13897722F4229800CF909B /* NSThreadDemo.m */; };
 		3E2C237822F0410100B1DAF2 /* guohq.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2C237722F0410100B1DAF2 /* guohq.m */; };
+		3E447E0322F95F7B000C6B13 /* VNRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E447E0122F95F7A000C6B13 /* VNRequestOperation.m */; };
 		3E9AA47F22F2732200AD5A53 /* MGTestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AA47E22F2732200AD5A53 /* MGTestOperation.m */; };
 		3EE5AAA022C0A52F001F3B29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5AA9F22C0A52F001F3B29 /* AppDelegate.m */; };
 		3EE5AAA322C0A52F001F3B29 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5AAA222C0A52F001F3B29 /* ViewController.m */; };
@@ -44,6 +45,9 @@
 		3E13897722F4229800CF909B /* NSThreadDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSThreadDemo.m; sourceTree = "<group>"; };
 		3E2C237722F0410100B1DAF2 /* guohq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = guohq.m; sourceTree = "<group>"; };
 		3E2C237922F0418E00B1DAF2 /* MKop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKop.h; sourceTree = "<group>"; };
+		3E447E0022F95F7A000C6B13 /* VNRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VNRequestOperation.h; sourceTree = "<group>"; };
+		3E447E0122F95F7A000C6B13 /* VNRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VNRequestOperation.m; sourceTree = "<group>"; };
+		3E447E0222F95F7A000C6B13 /* VNOperationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VNOperationProtocol.h; sourceTree = "<group>"; };
 		3E47FAFC22E0C3AD00CBE8DE /* guohq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = guohq.h; sourceTree = "<group>"; };
 		3E9AA47D22F2732200AD5A53 /* MGTestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGTestOperation.h; sourceTree = "<group>"; };
 		3E9AA47E22F2732200AD5A53 /* MGTestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGTestOperation.m; sourceTree = "<group>"; };
@@ -126,6 +130,9 @@
 				3EE5AA9F22C0A52F001F3B29 /* AppDelegate.m */,
 				3EE5AAA122C0A52F001F3B29 /* ViewController.h */,
 				3EE5AAA222C0A52F001F3B29 /* ViewController.m */,
+				3E447E0222F95F7A000C6B13 /* VNOperationProtocol.h */,
+				3E447E0022F95F7A000C6B13 /* VNRequestOperation.h */,
+				3E447E0122F95F7A000C6B13 /* VNRequestOperation.m */,
 				3E13897622F4229800CF909B /* NSThreadDemo.h */,
 				3E13897722F4229800CF909B /* NSThreadDemo.m */,
 				3EFBDDA522C5E6CB001B2920 /* SViewController.h */,
@@ -341,6 +348,7 @@
 				3EFBDDA722C5E6CB001B2920 /* SViewController.m in Sources */,
 				3E13897822F4229800CF909B /* NSThreadDemo.m in Sources */,
 				3E9AA47F22F2732200AD5A53 /* MGTestOperation.m in Sources */,
+				3E447E0322F95F7B000C6B13 /* VNRequestOperation.m in Sources */,
 				3E2C237822F0410100B1DAF2 /* guohq.m in Sources */,
 				3EE5AAA022C0A52F001F3B29 /* AppDelegate.m in Sources */,
 			);

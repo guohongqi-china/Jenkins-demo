@@ -14,6 +14,7 @@
 #import <SDWebImage/SDWebImage.h>
 #import "MGTestOperation.h"
 #import "NSThreadDemo.h"
+#import "VNRequestOperation.h"
 
 
 @interface ViewController ()
@@ -54,24 +55,90 @@ NSInteger you = 20;
     [_imageView1 sd_setImageWithURL:[NSURL URLWithString:@"https://weiliicimg1.pstatp.com/weili/l/406339082050338830.webp"]];
     [_imageView2 sd_setImageWithURL:[NSURL URLWithString:@"https://weiliicimg1.pstatp.com/weili/l/406339082050338830.webp"]];
     [_imageview3 sd_setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564562843251&di=9698638a968d06fded2a75f621997265&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201801%2F11%2F20180111153213_W5Yyd.jpeg"]];
-
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSThreadDemo *demo = [NSThreadDemo new];
-//    [demo concurrentBySemaphore];
-//    [demo serialByGroupWait];
-//    [demo producerFunc];
-//    [demo queueDependenc];
-
-   
+    
+    NSOperationQueue *queue = [[NSOperationQueue alloc]init];
+    queue.name              = @"com.guohq";
+    queue.maxConcurrentOperationCount   = 2;
+    
+    VNRequestOperation<VNOperationProtocol> *requestOperation1 = [[VNRequestOperation alloc]initOperationWithTask:^{
+        NSLog(@"任务1开始 %@  ===  %@",[NSThread currentThread],[NSThread currentThread].name);
+        for (int i = 0; i < 20000; i++) {
+            NSMutableArray *arr = [NSMutableArray array];
+            [arr addObject:[NSString stringWithFormat:@"%d",i]];
+        }
+        NSLog(@"任务1结束");
+    }];
+    requestOperation1.name = @"1";
+    
+    VNRequestOperation<VNOperationProtocol> *requestOperation2 = [[VNRequestOperation alloc]initOperationWithTask:^{
+        NSLog(@"任务2开始 %@  ===  %@",[NSThread currentThread],[NSThread currentThread].name);
+        for (int i = 0; i < 20000; i++) {
+            NSMutableArray *arr = [NSMutableArray array];
+            [arr addObject:[NSString stringWithFormat:@"%d",i]];
+        }
+        NSLog(@"任务2结束");
+    }];
+    requestOperation2.name = @"2";
+    
+    
+    VNRequestOperation<VNOperationProtocol> *requestOperation3 = [[VNRequestOperation alloc]initOperationWithTask:^{
+        NSLog(@"任务3开始 %@  ===  %@",[NSThread currentThread],[NSThread currentThread].name);
+        for (int i = 0; i < 20000; i++) {
+            NSMutableArray *arr = [NSMutableArray array];
+            [arr addObject:[NSString stringWithFormat:@"%d",i]];
+        }
+        NSLog(@"任务3结束");
+    }];
+    requestOperation3.name = @"3";
+    
+    
+    VNRequestOperation<VNOperationProtocol> *requestOperation4 = [[VNRequestOperation alloc]initOperationWithTask:^{
+        NSLog(@"任务4开始 %@  ===  %@",[NSThread currentThread],[NSThread currentThread].name);
+        for (int i = 0; i < 20000; i++) {
+            NSMutableArray *arr = [NSMutableArray array];
+            [arr addObject:[NSString stringWithFormat:@"%d",i]];
+        }
+        NSLog(@"任务4结束");
+    }];
+    requestOperation4.name = @"4";
+    
+    
+    VNRequestOperation<VNOperationProtocol> *requestOperation5 = [[VNRequestOperation alloc]initOperationWithTask:^{
+        NSLog(@"任务5开始 %@  ===  %@",[NSThread currentThread],[NSThread currentThread].name);
+        for (int i = 0; i < 2000; i++) {
+            NSMutableArray *arr = [NSMutableArray array];
+            [arr addObject:[NSString stringWithFormat:@"%d",i]];
+        }
+        NSLog(@"任务5结束");
+    }];
+    requestOperation5.name = @"5";
+    
+    
+    [queue addOperation:requestOperation1];
+    [queue addOperation:requestOperation2];
+    [queue addOperation:requestOperation3];
+    [queue addOperation:requestOperation4];
+    [queue addOperation:requestOperation5];
+    
+    
+    //    NSThreadDemo *demo = [NSThreadDemo new];
+    //    [demo concurrentBySemaphore];
+    //    [demo serialByGroupWait];
+    //    [demo producerFunc];
+    //    [demo queueDependenc];
+    
+    
     
     return;
     SControl = [[SViewController alloc]init];
-
-
+    
+    
 }
 
 - (int(^)(int))muitle:(int)name{
@@ -90,7 +157,7 @@ NSInteger you = 20;
 - (IBAction)asdfasdfa:(id)sender {
     
     [_imageView4 sd_setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564562913515&di=a62057f48fec12ebc79af444b382347a&imgtype=0&src=http%3A%2F%2F2f.zol-img.com.cn%2Fproduct%2F13_800x600%2F889%2FcenhT9t4pgRg.jpg"]];
-
+    
 }
 
 
