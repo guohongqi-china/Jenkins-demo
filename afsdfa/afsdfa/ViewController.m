@@ -15,6 +15,7 @@
 #import "MGTestOperation.h"
 #import "NSThreadDemo.h"
 #import "VNRequestOperation.h"
+#import "ViewManager.h"
 
 
 @interface ViewController ()
@@ -62,76 +63,22 @@ NSInteger you = 20;
     [super viewDidLoad];
     
     
-    NSOperationQueue *queue = [[NSOperationQueue alloc]init];
-    queue.name              = @"com.guohq";
-    queue.maxConcurrentOperationCount   = 2;
-    
-    VNRequestOperation<VNOperationProtocol> *requestOperation1 = [[VNRequestOperation alloc]initOperationWithTask:^{
-        NSLog(@"任务1开始 %@  ===  %@",[NSThread currentThread],[NSThread currentThread].name);
-        for (int i = 0; i < 20000; i++) {
-            NSMutableArray *arr = [NSMutableArray array];
-            [arr addObject:[NSString stringWithFormat:@"%d",i]];
-        }
-        NSLog(@"任务1结束");
-    }];
-    requestOperation1.name = @"1";
-    
-    VNRequestOperation<VNOperationProtocol> *requestOperation2 = [[VNRequestOperation alloc]initOperationWithTask:^{
-        NSLog(@"任务2开始 %@  ===  %@",[NSThread currentThread],[NSThread currentThread].name);
-        for (int i = 0; i < 20000; i++) {
-            NSMutableArray *arr = [NSMutableArray array];
-            [arr addObject:[NSString stringWithFormat:@"%d",i]];
-        }
-        NSLog(@"任务2结束");
-    }];
-    requestOperation2.name = @"2";
+
+    ViewManager  *manager = [[ViewManager alloc] initWithFrame:CGRectMake(0, 200, [UIScreen mainScreen].bounds.size.width, 300)];
+    [manager createViewMaxCells:5 sourceData:@[@"+ 9g",@"+ 8g",@"+ 5g",@"+ 3g",@"+ 4g"]];
+    [manager createLineView:@[
+                              @{@"vertical":@[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11"],
+                                @"sourceData":@[@(12), @(2),@(600),@(27.4),@(37),@(29.7),@(27.4),@(212.4),@(127.4),@(27.4),@(227.4)]
+                              },
+                              @{@"vertical":@[@"1",@"2",@"3",@"4",@"5",@"6",],
+                                @"sourceData":@[@(12), @(2),@(200),@(27.4),@(37),@(22),@(29.7),@(27.4)]
+                              }
+                            ]];
+    [manager loadView:SUBVIEW_LINE];
+    [self.view addSubview:manager.parentView];
     
     
-    VNRequestOperation<VNOperationProtocol> *requestOperation3 = [[VNRequestOperation alloc]initOperationWithTask:^{
-        NSLog(@"任务3开始 %@  ===  %@",[NSThread currentThread],[NSThread currentThread].name);
-        for (int i = 0; i < 20000; i++) {
-            NSMutableArray *arr = [NSMutableArray array];
-            [arr addObject:[NSString stringWithFormat:@"%d",i]];
-        }
-        NSLog(@"任务3结束");
-    }];
-    requestOperation3.name = @"3";
-    
-    
-    VNRequestOperation<VNOperationProtocol> *requestOperation4 = [[VNRequestOperation alloc]initOperationWithTask:^{
-        NSLog(@"任务4开始 %@  ===  %@",[NSThread currentThread],[NSThread currentThread].name);
-        for (int i = 0; i < 20000; i++) {
-            NSMutableArray *arr = [NSMutableArray array];
-            [arr addObject:[NSString stringWithFormat:@"%d",i]];
-        }
-        NSLog(@"任务4结束");
-    }];
-    requestOperation4.name = @"4";
-    
-    
-    VNRequestOperation<VNOperationProtocol> *requestOperation5 = [[VNRequestOperation alloc]initOperationWithTask:^{
-        NSLog(@"任务5开始 %@  ===  %@",[NSThread currentThread],[NSThread currentThread].name);
-        for (int i = 0; i < 2000; i++) {
-            NSMutableArray *arr = [NSMutableArray array];
-            [arr addObject:[NSString stringWithFormat:@"%d",i]];
-        }
-        NSLog(@"任务5结束");
-    }];
-    requestOperation5.name = @"5";
-    
-    
-    [queue addOperation:requestOperation1];
-    [queue addOperation:requestOperation2];
-    [queue addOperation:requestOperation3];
-    [queue addOperation:requestOperation4];
-    [queue addOperation:requestOperation5];
-    
-    
-    //    NSThreadDemo *demo = [NSThreadDemo new];
-    //    [demo concurrentBySemaphore];
-    //    [demo serialByGroupWait];
-    //    [demo producerFunc];
-    //    [demo queueDependenc];
+
     
     
     
@@ -209,6 +156,73 @@ NSInteger you = 20;
 }
 
 
+#pragma mark --  自定义队列
+
+- (void)demo2{
+    NSOperationQueue *queue = [[NSOperationQueue alloc]init];
+    queue.name              = @"com.guohq";
+    queue.maxConcurrentOperationCount   = 2;
+    
+    VNRequestOperation<VNOperationProtocol> *requestOperation1 = [[VNRequestOperation alloc]initOperationWithTask:^{
+        NSLog(@"任务1开始 %@  ===  %@",[NSThread currentThread],[NSThread currentThread].name);
+        for (int i = 0; i < 20000; i++) {
+            NSMutableArray *arr = [NSMutableArray array];
+            [arr addObject:[NSString stringWithFormat:@"%d",i]];
+        }
+        NSLog(@"任务1结束");
+    }];
+    requestOperation1.name = @"1";
+    
+    VNRequestOperation<VNOperationProtocol> *requestOperation2 = [[VNRequestOperation alloc]initOperationWithTask:^{
+        NSLog(@"任务2开始 %@  ===  %@",[NSThread currentThread],[NSThread currentThread].name);
+        for (int i = 0; i < 20000; i++) {
+            NSMutableArray *arr = [NSMutableArray array];
+            [arr addObject:[NSString stringWithFormat:@"%d",i]];
+        }
+        NSLog(@"任务2结束");
+    }];
+    requestOperation2.name = @"2";
+    
+    
+    VNRequestOperation<VNOperationProtocol> *requestOperation3 = [[VNRequestOperation alloc]initOperationWithTask:^{
+        NSLog(@"任务3开始 %@  ===  %@",[NSThread currentThread],[NSThread currentThread].name);
+        for (int i = 0; i < 20000; i++) {
+            NSMutableArray *arr = [NSMutableArray array];
+            [arr addObject:[NSString stringWithFormat:@"%d",i]];
+        }
+        NSLog(@"任务3结束");
+    }];
+    requestOperation3.name = @"3";
+    
+    
+    VNRequestOperation<VNOperationProtocol> *requestOperation4 = [[VNRequestOperation alloc]initOperationWithTask:^{
+        NSLog(@"任务4开始 %@  ===  %@",[NSThread currentThread],[NSThread currentThread].name);
+        for (int i = 0; i < 20000; i++) {
+            NSMutableArray *arr = [NSMutableArray array];
+            [arr addObject:[NSString stringWithFormat:@"%d",i]];
+        }
+        NSLog(@"任务4结束");
+    }];
+    requestOperation4.name = @"4";
+    
+    
+    VNRequestOperation<VNOperationProtocol> *requestOperation5 = [[VNRequestOperation alloc]initOperationWithTask:^{
+        NSLog(@"任务5开始 %@  ===  %@",[NSThread currentThread],[NSThread currentThread].name);
+        for (int i = 0; i < 2000; i++) {
+            NSMutableArray *arr = [NSMutableArray array];
+            [arr addObject:[NSString stringWithFormat:@"%d",i]];
+        }
+        NSLog(@"任务5结束");
+    }];
+    requestOperation5.name = @"5";
+    
+    
+    [queue addOperation:requestOperation1];
+    [queue addOperation:requestOperation2];
+    [queue addOperation:requestOperation3];
+    [queue addOperation:requestOperation4];
+    [queue addOperation:requestOperation5];
+}
 
 
 

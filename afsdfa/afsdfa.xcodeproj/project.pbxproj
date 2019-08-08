@@ -20,6 +20,10 @@
 		3EE5AAAE22C0A531001F3B29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5AAAD22C0A531001F3B29 /* main.m */; };
 		3EE5AAB822C0A531001F3B29 /* afsdfaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5AAB722C0A531001F3B29 /* afsdfaTests.m */; };
 		3EE5AAC322C0A531001F3B29 /* afsdfaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5AAC222C0A531001F3B29 /* afsdfaUITests.m */; };
+		3EF12E5222FA669400037123 /* ViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF12E5122FA669400037123 /* ViewManager.m */; };
+		3EF12E5622FA671300037123 /* BubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF12E5522FA671300037123 /* BubbleView.m */; };
+		3EF12E5922FA674400037123 /* BubbleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF12E5822FA674400037123 /* BubbleCell.m */; };
+		3EF12E5F22FABB3900037123 /* ChartLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF12E5E22FABB3900037123 /* ChartLineView.m */; };
 		3EFBDDA722C5E6CB001B2920 /* SViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBDDA622C5E6CB001B2920 /* SViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +72,15 @@
 		3EE5AABE22C0A531001F3B29 /* afsdfaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = afsdfaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE5AAC222C0A531001F3B29 /* afsdfaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = afsdfaUITests.m; sourceTree = "<group>"; };
 		3EE5AAC422C0A531001F3B29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EF12E5022FA669400037123 /* ViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewManager.h; sourceTree = "<group>"; };
+		3EF12E5122FA669400037123 /* ViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewManager.m; sourceTree = "<group>"; };
+		3EF12E5422FA671300037123 /* BubbleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleView.h; sourceTree = "<group>"; };
+		3EF12E5522FA671300037123 /* BubbleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleView.m; sourceTree = "<group>"; };
+		3EF12E5722FA674400037123 /* BubbleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleCell.h; sourceTree = "<group>"; };
+		3EF12E5822FA674400037123 /* BubbleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleCell.m; sourceTree = "<group>"; };
+		3EF12E5D22FABB3900037123 /* ChartLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartLineView.h; sourceTree = "<group>"; };
+		3EF12E5E22FABB3900037123 /* ChartLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartLineView.m; sourceTree = "<group>"; };
+		3EF5C3D922FB0EE20046F353 /* AdapterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdapterProtocol.h; sourceTree = "<group>"; };
 		3EFBDDA522C5E6CB001B2920 /* SViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SViewController.h; sourceTree = "<group>"; };
 		3EFBDDA622C5E6CB001B2920 /* SViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SViewController.m; sourceTree = "<group>"; };
 		680EB68E918AD10D07128DB6 /* Pods-afsdfa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-afsdfa.release.xcconfig"; path = "Target Support Files/Pods-afsdfa/Pods-afsdfa.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +143,7 @@
 				3EE5AA9F22C0A52F001F3B29 /* AppDelegate.m */,
 				3EE5AAA122C0A52F001F3B29 /* ViewController.h */,
 				3EE5AAA222C0A52F001F3B29 /* ViewController.m */,
+				3EF12E5322FA669D00037123 /* New Group */,
 				3E447E0222F95F7A000C6B13 /* VNOperationProtocol.h */,
 				3E447E0022F95F7A000C6B13 /* VNRequestOperation.h */,
 				3E447E0122F95F7A000C6B13 /* VNRequestOperation.m */,
@@ -168,6 +182,22 @@
 				3EE5AAC422C0A531001F3B29 /* Info.plist */,
 			);
 			path = afsdfaUITests;
+			sourceTree = "<group>";
+		};
+		3EF12E5322FA669D00037123 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				3EF12E5022FA669400037123 /* ViewManager.h */,
+				3EF12E5122FA669400037123 /* ViewManager.m */,
+				3EF5C3D922FB0EE20046F353 /* AdapterProtocol.h */,
+				3EF12E5422FA671300037123 /* BubbleView.h */,
+				3EF12E5522FA671300037123 /* BubbleView.m */,
+				3EF12E5722FA674400037123 /* BubbleCell.h */,
+				3EF12E5822FA674400037123 /* BubbleCell.m */,
+				3EF12E5D22FABB3900037123 /* ChartLineView.h */,
+				3EF12E5E22FABB3900037123 /* ChartLineView.m */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		520E9648D8488F6DD39BD5C9 /* Pods */ = {
@@ -345,12 +375,16 @@
 			files = (
 				3EE5AAA322C0A52F001F3B29 /* ViewController.m in Sources */,
 				3EE5AAAE22C0A531001F3B29 /* main.m in Sources */,
+				3EF12E5622FA671300037123 /* BubbleView.m in Sources */,
 				3EFBDDA722C5E6CB001B2920 /* SViewController.m in Sources */,
 				3E13897822F4229800CF909B /* NSThreadDemo.m in Sources */,
 				3E9AA47F22F2732200AD5A53 /* MGTestOperation.m in Sources */,
+				3EF12E5922FA674400037123 /* BubbleCell.m in Sources */,
+				3EF12E5F22FABB3900037123 /* ChartLineView.m in Sources */,
 				3E447E0322F95F7B000C6B13 /* VNRequestOperation.m in Sources */,
 				3E2C237822F0410100B1DAF2 /* guohq.m in Sources */,
 				3EE5AAA022C0A52F001F3B29 /* AppDelegate.m in Sources */,
+				3EF12E5222FA669400037123 /* ViewManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

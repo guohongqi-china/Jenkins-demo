@@ -4,6 +4,7 @@ platform :ios, '10.0'
 target'afsdfa'do
 
 pod 'SDWebImage'
+pod 'ORCharts/Line' 
 
 
 end
