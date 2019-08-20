@@ -143,7 +143,7 @@
 				3EE5AA9F22C0A52F001F3B29 /* AppDelegate.m */,
 				3EE5AAA122C0A52F001F3B29 /* ViewController.h */,
 				3EE5AAA222C0A52F001F3B29 /* ViewController.m */,
-				3EF12E5322FA669D00037123 /* New Group */,
+				3EF12E5322FA669D00037123 /* Component */,
 				3E447E0222F95F7A000C6B13 /* VNOperationProtocol.h */,
 				3E447E0022F95F7A000C6B13 /* VNRequestOperation.h */,
 				3E447E0122F95F7A000C6B13 /* VNRequestOperation.m */,
@@ -184,7 +184,7 @@
 			path = afsdfaUITests;
 			sourceTree = "<group>";
 		};
-		3EF12E5322FA669D00037123 /* New Group */ = {
+		3EF12E5322FA669D00037123 /* Component */ = {
 			isa = PBXGroup;
 			children = (
 				3EF12E5022FA669400037123 /* ViewManager.h */,
@@ -197,7 +197,7 @@
 				3EF12E5D22FABB3900037123 /* ChartLineView.h */,
 				3EF12E5E22FABB3900037123 /* ChartLineView.m */,
 			);
-			path = "New Group";
+			path = Component;
 			sourceTree = "<group>";
 		};
 		520E9648D8488F6DD39BD5C9 /* Pods */ = {

@@ -56,7 +56,7 @@ NSInteger you = 20;
     [_imageView1 sd_setImageWithURL:[NSURL URLWithString:@"https://weiliicimg1.pstatp.com/weili/l/406339082050338830.webp"]];
     [_imageView2 sd_setImageWithURL:[NSURL URLWithString:@"https://weiliicimg1.pstatp.com/weili/l/406339082050338830.webp"]];
     [_imageview3 sd_setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564562843251&di=9698638a968d06fded2a75f621997265&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201801%2F11%2F20180111153213_W5Yyd.jpeg"]];
-    
+    dispatch_main_async_safe(<#block#>)
 }
 
 - (void)viewDidLoad {
