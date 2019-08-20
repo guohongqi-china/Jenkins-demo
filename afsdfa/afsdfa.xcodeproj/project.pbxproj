@@ -576,6 +576,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = dev_india;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/afsdfa/logi/logi";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -604,6 +605,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = dev_india;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/afsdfa/logi/logi";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
