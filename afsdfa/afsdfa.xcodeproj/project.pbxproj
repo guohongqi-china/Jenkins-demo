@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C2DA1EA69263A4A5C0B4E6C /* libPods-afsdfa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C06E82FAC92DD6BE1D56C574 /* libPods-afsdfa.a */; };
+		3E132CC72313792F00089612 /* VehicleCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E132CC62313792F00089612 /* VehicleCache.m */; };
 		3E13897822F4229800CF909B /* NSThreadDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E13897722F4229800CF909B /* NSThreadDemo.m */; };
 		3E2C237822F0410100B1DAF2 /* guohq.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2C237722F0410100B1DAF2 /* guohq.m */; };
 		3E447E0322F95F7B000C6B13 /* VNRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E447E0122F95F7A000C6B13 /* VNRequestOperation.m */; };
@@ -24,6 +25,10 @@
 		3EF12E5622FA671300037123 /* BubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF12E5522FA671300037123 /* BubbleView.m */; };
 		3EF12E5922FA674400037123 /* BubbleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF12E5822FA674400037123 /* BubbleCell.m */; };
 		3EF12E5F22FABB3900037123 /* ChartLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF12E5E22FABB3900037123 /* ChartLineView.m */; };
+		3EF7A574231231AF00159A20 /* VehicleControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7A56B231231AF00159A20 /* VehicleControl.m */; };
+		3EF7A575231231AF00159A20 /* Normal.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7A56C231231AF00159A20 /* Normal.m */; };
+		3EF7A576231231AF00159A20 /* UNKnow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7A572231231AF00159A20 /* UNKnow.m */; };
+		3EF7A577231231AF00159A20 /* UNNormal.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7A573231231AF00159A20 /* UNNormal.m */; };
 		3EFBDDA722C5E6CB001B2920 /* SViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBDDA622C5E6CB001B2920 /* SViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E132CC52313792F00089612 /* VehicleCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleCache.h; sourceTree = "<group>"; };
+		3E132CC62313792F00089612 /* VehicleCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleCache.m; sourceTree = "<group>"; };
 		3E13897622F4229800CF909B /* NSThreadDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSThreadDemo.h; sourceTree = "<group>"; };
 		3E13897722F4229800CF909B /* NSThreadDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSThreadDemo.m; sourceTree = "<group>"; };
 		3E2C237722F0410100B1DAF2 /* guohq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = guohq.m; sourceTree = "<group>"; };
@@ -81,6 +88,15 @@
 		3EF12E5D22FABB3900037123 /* ChartLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartLineView.h; sourceTree = "<group>"; };
 		3EF12E5E22FABB3900037123 /* ChartLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartLineView.m; sourceTree = "<group>"; };
 		3EF5C3D922FB0EE20046F353 /* AdapterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdapterProtocol.h; sourceTree = "<group>"; };
+		3EF7A56B231231AF00159A20 /* VehicleControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleControl.m; sourceTree = "<group>"; };
+		3EF7A56C231231AF00159A20 /* Normal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Normal.m; sourceTree = "<group>"; };
+		3EF7A56D231231AF00159A20 /* UNKnow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNKnow.h; sourceTree = "<group>"; };
+		3EF7A56E231231AF00159A20 /* UNNormal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNNormal.h; sourceTree = "<group>"; };
+		3EF7A56F231231AF00159A20 /* StatusProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusProtocol.h; sourceTree = "<group>"; };
+		3EF7A570231231AF00159A20 /* VehicleControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleControl.h; sourceTree = "<group>"; };
+		3EF7A571231231AF00159A20 /* Normal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Normal.h; sourceTree = "<group>"; };
+		3EF7A572231231AF00159A20 /* UNKnow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNKnow.m; sourceTree = "<group>"; };
+		3EF7A573231231AF00159A20 /* UNNormal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNNormal.m; sourceTree = "<group>"; };
 		3EFBDDA522C5E6CB001B2920 /* SViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SViewController.h; sourceTree = "<group>"; };
 		3EFBDDA622C5E6CB001B2920 /* SViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SViewController.m; sourceTree = "<group>"; };
 		680EB68E918AD10D07128DB6 /* Pods-afsdfa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-afsdfa.release.xcconfig"; path = "Target Support Files/Pods-afsdfa/Pods-afsdfa.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +173,7 @@
 				3E2C237922F0418E00B1DAF2 /* MKop.h */,
 				3E47FAFC22E0C3AD00CBE8DE /* guohq.h */,
 				3E2C237722F0410100B1DAF2 /* guohq.m */,
+				3EF7A56A231231AF00159A20 /* VehicleStatus */,
 				3EE5AAA422C0A52F001F3B29 /* Main.storyboard */,
 				3EE5AAA722C0A531001F3B29 /* Assets.xcassets */,
 				3EE5AAA922C0A531001F3B29 /* LaunchScreen.storyboard */,
@@ -198,6 +215,24 @@
 				3EF12E5E22FABB3900037123 /* ChartLineView.m */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		3EF7A56A231231AF00159A20 /* VehicleStatus */ = {
+			isa = PBXGroup;
+			children = (
+				3EF7A570231231AF00159A20 /* VehicleControl.h */,
+				3EF7A56B231231AF00159A20 /* VehicleControl.m */,
+				3E132CC52313792F00089612 /* VehicleCache.h */,
+				3E132CC62313792F00089612 /* VehicleCache.m */,
+				3EF7A56F231231AF00159A20 /* StatusProtocol.h */,
+				3EF7A56D231231AF00159A20 /* UNKnow.h */,
+				3EF7A572231231AF00159A20 /* UNKnow.m */,
+				3EF7A56E231231AF00159A20 /* UNNormal.h */,
+				3EF7A573231231AF00159A20 /* UNNormal.m */,
+				3EF7A571231231AF00159A20 /* Normal.h */,
+				3EF7A56C231231AF00159A20 /* Normal.m */,
+			);
+			path = VehicleStatus;
 			sourceTree = "<group>";
 		};
 		520E9648D8488F6DD39BD5C9 /* Pods */ = {
@@ -374,12 +409,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EE5AAA322C0A52F001F3B29 /* ViewController.m in Sources */,
+				3E132CC72313792F00089612 /* VehicleCache.m in Sources */,
+				3EF7A577231231AF00159A20 /* UNNormal.m in Sources */,
+				3EF7A574231231AF00159A20 /* VehicleControl.m in Sources */,
 				3EE5AAAE22C0A531001F3B29 /* main.m in Sources */,
 				3EF12E5622FA671300037123 /* BubbleView.m in Sources */,
 				3EFBDDA722C5E6CB001B2920 /* SViewController.m in Sources */,
 				3E13897822F4229800CF909B /* NSThreadDemo.m in Sources */,
 				3E9AA47F22F2732200AD5A53 /* MGTestOperation.m in Sources */,
 				3EF12E5922FA674400037123 /* BubbleCell.m in Sources */,
+				3EF7A575231231AF00159A20 /* Normal.m in Sources */,
+				3EF7A576231231AF00159A20 /* UNKnow.m in Sources */,
 				3EF12E5F22FABB3900037123 /* ChartLineView.m in Sources */,
 				3E447E0322F95F7B000C6B13 /* VNRequestOperation.m in Sources */,
 				3E2C237822F0410100B1DAF2 /* guohq.m in Sources */,

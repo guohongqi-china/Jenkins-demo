@@ -16,6 +16,7 @@
 #import "NSThreadDemo.h"
 #import "VNRequestOperation.h"
 #import "ViewManager.h"
+#import "VehicleControl.h"
 
 
 @interface ViewController ()
@@ -61,25 +62,40 @@ NSInteger you = 20;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-
-    ViewManager  *manager = [[ViewManager alloc] initWithFrame:CGRectMake(0, 200, [UIScreen mainScreen].bounds.size.width, 300)];
-    [manager createViewMaxCells:5 sourceData:@[@"+ 9g",@"+ 8g",@"+ 5g",@"+ 3g",@"+ 4g"]];
-    [manager createLineView:@[
-                              @{@"vertical":@[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11"],
-                                @"sourceData":@[@(12), @(2),@(600),@(27.4),@(37),@(29.7),@(27.4),@(212.4),@(127.4),@(27.4),@(227.4)]
-                              },
-                              @{@"vertical":@[@"1",@"2",@"3",@"4",@"5",@"6",],
-                                @"sourceData":@[@(12), @(2),@(200),@(27.4),@(37),@(22),@(29.7),@(27.4)]
-                              }
-                            ]];
-    [manager loadView:SUBVIEW_LINE];
-    [self.view addSubview:manager.parentView];
-    
-    
+    VehicleControl *control = [VehicleControl sharedSingleton];
 
     
+    for (int i = 0; i < 230; i++) {
+        sleep(0.5);
+        Vehicle_STATUS status;
+        if (i%2 == 0) {
+            status = Vehicle_Normal;
+        }else{
+            status = Vehicle_UNormal;
+        }
+        [control setData:[NSNumber numberWithInteger:status] key:[NSString stringWithFormat:@"SK81234567890%d",i]];
+    }
     
+//
+//    [self sdDemo];
+//
+//    ViewManager  *manager = [[ViewManager alloc] initWithFrame:CGRectMake(0, 200, [UIScreen mainScreen].bounds.size.width, 300)];
+//    [manager createViewMaxCells:5 sourceData:@[@"+ 9g",@"+ 8g",@"+ 5g",@"+ 3g",@"+ 4g"]];
+//    [manager createLineView:@[
+//                              @{@"vertical":@[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11"],
+//                                @"sourceData":@[@(12), @(2),@(600),@(27.4),@(37),@(29.7),@(27.4),@(212.4),@(127.4),@(27.4),@(227.4)]
+//                              },
+//                              @{@"vertical":@[@"1",@"2",@"3",@"4",@"5",@"6",],
+//                                @"sourceData":@[@(12), @(2),@(200),@(27.4),@(37),@(22),@(29.7),@(27.4)]
+//                              }
+//                            ]];
+//    [manager loadView:SUBVIEW_LINE];
+//    [self.view addSubview:manager.parentView];
+//
+//
+//
+//    NSLog(@"%lu",sizeof(manager));
+//
     
     return;
     SControl = [[SViewController alloc]init];
