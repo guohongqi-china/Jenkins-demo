@@ -16,6 +16,7 @@
 
 @property (strong, nonatomic, nonnull) NSOperationQueue *requestQueue;
 @property (nonatomic, strong)    dispatch_queue_t synchronizationQueue;
+@property (nonatomic, strong)    dispatch_semaphore_t semaphore;
 
 
 
@@ -28,6 +29,9 @@
         _requestQueue       = [[NSOperationQueue alloc]init];
         _requestQueue.name  = @"com.vn.requetQueue";
         _requestQueue.maxConcurrentOperationCount = 3;
+        _semaphore = dispatch_semaphore_create(3);
+        _synchronizationQueue = dispatch_queue_create("com.guohq", DISPATCH_QUEUE_CONCURRENT);
+        
     }
     return self;
 }
@@ -70,9 +74,24 @@
 
 
 - (void)wirteData:(id)data key:(NSString *)key{
+//    NSMutableDictionary *cacheData = [[self readCacheData] mutableCopy];
+//    if (cacheData.count == 0) {
+//        cacheData = [NSMutableDictionary dictionary];
+//    }
+//    __weak typeof(self) weakself = self;
+//    dispatch_semaphore_wait(_semaphore, DISPATCH_TIME_FOREVER);
+//    dispatch_async(_synchronizationQueue, ^{
+//        NSLog(@"当前线程%@",[NSThread currentThread]);
+//        [self clearCrashData];
+//        [cacheData setObject:data forKey:key];
+//        [self writeDataToFile:cacheData];
+//        sleep(5);
+//        dispatch_semaphore_signal(weakself.semaphore);
+//    });
     
     VNRequestOperation *operation = [[VNRequestOperation alloc]initOperationWithTask:^{
         NSMutableDictionary *cacheData = [[self readCacheData] mutableCopy];
+        NSLog(@"当前线程%@",[NSThread currentThread]);
         @synchronized (self) {
             if (cacheData.count == 0) {
                 cacheData = [NSMutableDictionary dictionary];
@@ -80,7 +99,7 @@
             [self clearCrashData];
             [cacheData setObject:data forKey:key];
             [self writeDataToFile:cacheData];
-            
+
         }
     }];
     operation.name = key;
@@ -89,20 +108,23 @@
 }
 
 - (void)clearCrashData{
-    NSLog(@"当前线程%@",[NSThread currentThread]);
+//    NSLog(@"当前线程%@",[NSThread currentThread]);
     NSFileManager  *fileMananger = [NSFileManager defaultManager];
     if ([fileMananger fileExistsAtPath:filePaht]) {
         NSDictionary *dic = [fileMananger attributesOfItemAtPath:filePaht error:nil];
         long long size = [dic fileSize];
-        NSLog(@"%lld",[dic fileSize]);
+//        NSLog(@"%lld",[dic fileSize]);
         
         // 大于 10kb
         if (size > 2 * 1024) {
-            NSLog(@"执行删除文件中");
-            NSMutableDictionary *dic = [[self readCacheData] mutableCopy];
-            [dic removeObjectForKey:dic.allKeys.firstObject];
-            [self writeDataToFile:dic];
-            [self clearCrashData];
+//            NSLog(@"执行删除文件中");
+//            @synchronized (self) {
+                NSMutableDictionary *dic = [[self readCacheData] mutableCopy];
+                [dic removeObjectForKey:dic.allKeys.firstObject];
+                [self writeDataToFile:dic];
+                [self clearCrashData];
+//            }
+            
         }
     }
 }

@@ -97,26 +97,25 @@ NSInteger you = 20;
 //    queue.maxConcurrentOperationCount   = 2;
     
 //    _dataArr = [NSMutableDictionary dictionary];
-//    [self demo4];
+//    [self demo7];
     
     
 //    [self sdDemo];
 //
-//    VehicleControl *control = [VehicleControl sharedSingleton];
-//
-//    for (int i = 0; i < 1000; i++) {
-//        sleep(0.5);
-//        Vehicle_STATUS status;
-//        if (i%2 == 0) {
-//            status = Vehicle_Normal;
-//        }else{
-//            status = Vehicle_UNormal;
-//        }
-//        [control setData:[NSNumber numberWithInteger:status] key:[NSString stringWithFormat:@"SK81234567890%d",i]];
-//    }
+    VehicleControl *control = [VehicleControl sharedSingleton];
+
+    for (int i = 0; i < 100; i++) {
+        Vehicle_STATUS status;
+        if (i%2 == 0) {
+            status = Vehicle_Normal;
+        }else{
+            status = Vehicle_UNormal;
+        }
+        [control setData:[NSNumber numberWithInteger:status] key:[NSString stringWithFormat:@"SK81234567890%d",i]];
+    }
     
 //
-    [self demo8];
+//    [self demo8];
 //
 //    ViewManager  *manager = [[ViewManager alloc] initWithFrame:CGRectMake(0, 200, [UIScreen mainScreen].bounds.size.width, 300)];
 //    [manager createViewMaxCells:5 sourceData:@[@"+ 9g",@"+ 8g",@"+ 5g",@"+ 3g",@"+ 4g"]];
@@ -445,42 +444,47 @@ NSInteger you = 20;
 - (void)demo7{
 
     dispatch_queue_t queue = dispatch_queue_create("com.guohq", DISPATCH_QUEUE_CONCURRENT);
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(2);
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(3);
+    for (int i = 0; i < 100; i++) {
+        dispatch_async(queue, ^{
+            dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+            for (int i = 0; i<10; i++) {
+            }
+            NSLog(@"444 == %@",[NSThread currentThread]);
+            sleep(5);
+            dispatch_semaphore_signal(semaphore);
+        });
+    }
+//    dispatch_async(queue, ^{
+//        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+//        for (int i = 0; i<10; i++) {
+//            NSLog(@"yyy %d == %@",i,[NSThread currentThread]);
+//        }
+//        sleep(5);
+//        dispatch_semaphore_signal(semaphore);
+//    });
+//
+//    dispatch_async(queue, ^{
+//        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+//        for (int i = 0; i<10; i++) {
+//            NSLog(@"uuu %d == %@",i,[NSThread currentThread]);
+//        }
+//        sleep(5);
+//        dispatch_semaphore_signal(semaphore);
+//    });
+//
+//    dispatch_async(queue, ^{
+//        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+//        for (int i = 0; i<10; i++) {
+//            NSLog(@"ttt %d == %@",i,[NSThread currentThread]);
+//        }
+//        dispatch_semaphore_signal(semaphore);
+//    });
     
-    dispatch_async(queue, ^{
-        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-        for (int i = 0; i<10; i++) {
-            NSLog(@"yyy %d == %@",i,[NSThread currentThread]);
-        }
-        sleep(5);
-        dispatch_semaphore_signal(semaphore);
-    });
     
-    dispatch_async(queue, ^{
-        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-        for (int i = 0; i<10; i++) {
-            NSLog(@"uuu %d == %@",i,[NSThread currentThread]);
-        }
-        sleep(5);
-        dispatch_semaphore_signal(semaphore);
-    });
     
-    dispatch_async(queue, ^{
-        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-        for (int i = 0; i<10; i++) {
-            NSLog(@"ttt %d == %@",i,[NSThread currentThread]);
-        }
-        dispatch_semaphore_signal(semaphore);
-    });
     
-    dispatch_async(queue, ^{
-        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-        for (int i = 0; i<10; i++) {
-            NSLog(@"444 %d == %@",i,[NSThread currentThread]);
-        }
-        dispatch_semaphore_signal(semaphore);
-    });
-    
+
 
 }
 

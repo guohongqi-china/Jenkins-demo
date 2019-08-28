@@ -43,9 +43,7 @@
 }
 
 - (void)setData:(id)data key:(NSString *)key{
-    @synchronized (_dataDic) {
-        [self.dataDic setValue:data forKey:key];
-    }
+    [self.dataDic setValue:data forKey:key];
     [_cacheManager cacheData:data key:key];
 }
 
