@@ -134,6 +134,7 @@ static id<SDImageLoader> _defaultImageLoader;
 
     SDWebImageCombinedOperation *operation = [SDWebImageCombinedOperation new];
     operation.manager = self;
+    operation.name    = url.absoluteString;
 
     BOOL isFailedUrl = NO;
     if (url) {

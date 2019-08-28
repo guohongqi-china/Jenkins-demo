@@ -15,6 +15,7 @@
 @interface VehicleCache()
 
 @property (strong, nonatomic, nonnull) NSOperationQueue *requestQueue;
+@property (nonatomic, strong)    dispatch_queue_t synchronizationQueue;
 
 
 
@@ -59,7 +60,7 @@
 - (NSDictionary *)readCacheData{
     NSString *path = [self cachePath];
     NSFileHandle *handle = [NSFileHandle fileHandleForReadingAtPath:path];
-    NSLog(@"路径%@",path);
+//    NSLog(@"路径%@",path);
     NSData *fileData = [handle readDataToEndOfFile];
     NSError *error;
     NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:fileData options:NSJSONReadingAllowFragments error:&error];
@@ -88,6 +89,7 @@
 }
 
 - (void)clearCrashData{
+    NSLog(@"当前线程%@",[NSThread currentThread]);
     NSFileManager  *fileMananger = [NSFileManager defaultManager];
     if ([fileMananger fileExistsAtPath:filePaht]) {
         NSDictionary *dic = [fileMananger attributesOfItemAtPath:filePaht error:nil];

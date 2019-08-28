@@ -117,14 +117,22 @@ const int64_t SDWebImageProgressUnitCountUnknown = 1LL;
             }
 #endif
             
+            // 是否需要调用callBackBlock
             BOOL shouldCallCompletedBlock = finished || (options & SDWebImageAvoidAutoSetImage);
+            
+            // 是否需要设置
+            // 1、拿到了一个image，希望自己设置
+            // 2、没有拿到image，不需要延时设置placeholder
             BOOL shouldNotSetImage = ((image && (options & SDWebImageAvoidAutoSetImage)) ||
                                       (!image && !(options & SDWebImageDelayPlaceholder)));
+            
             SDWebImageNoParamsBlock callCompletedBlockClojure = ^{
                 if (!self) { return; }
+                // 需要设置，标记runloop
                 if (!shouldNotSetImage) {
                     [self sd_setNeedsLayout];
                 }
+                // 调用block
                 if (completedBlock && shouldCallCompletedBlock) {
                     completedBlock(image, data, error, cacheType, finished, url);
                 }
@@ -134,6 +142,7 @@ const int64_t SDWebImageProgressUnitCountUnknown = 1LL;
             // OR
             // case 1b: we got no image and the SDWebImageDelayPlaceholder is not set
             if (shouldNotSetImage) {
+                // 是否需要调用 callCompletedBlockClojure
                 dispatch_main_async_safe(callCompletedBlockClojure);
                 return;
             }

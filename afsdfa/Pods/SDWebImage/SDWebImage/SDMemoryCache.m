@@ -28,6 +28,7 @@ static void * SDMemoryCacheContext = &SDMemoryCacheContext;
     [_config removeObserver:self forKeyPath:NSStringFromSelector(@selector(maxMemoryCount)) context:SDMemoryCacheContext];
 #if SD_UIKIT
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
+    
 #endif
 }
 

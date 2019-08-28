@@ -319,7 +319,7 @@
     if (!key) {
         return nil;
     }
-    
+
     NSData *data = [self.diskCache dataForKey:key];
     if (data) {
         return data;
@@ -376,7 +376,6 @@
         NSString *transformerKey = [transformer transformerKey];
         key = SDTransformedKeyForKey(key, transformerKey);
     }
-    
     // First check the in-memory cache...
     UIImage *image = [self imageFromMemoryCacheForKey:key];
 
@@ -397,10 +396,14 @@
     }
     
     // Second check the disk cache...
+
     NSOperation *operation = [NSOperation new];
+//    operation.name = key;
     // Check whether we need to synchronously query disk
     // 1. in-memory cache hit & memoryDataSync
     // 2. in-memory cache miss & diskDataSync
+//    NSLog(@"%@",[NSThread currentThread]);
+
     BOOL shouldQueryDiskSync = ((image && options & SDImageCacheQueryMemoryDataSync) ||
                                 (!image && options & SDImageCacheQueryDiskDataSync));
     void(^queryDiskBlock)(void) =  ^{
@@ -408,7 +411,8 @@
             // do not call the completion if cancelled
             return;
         }
-        
+        NSLog(@"%@",[NSThread currentThread]);
+
         @autoreleasepool {
             NSData *diskData = [self diskImageDataBySearchingAllPathsForKey:key];
             UIImage *diskImage;
@@ -445,7 +449,8 @@
     } else {
         dispatch_async(self.ioQueue, queryDiskBlock);
     }
-    
+    NSLog(@"%@",[NSThread currentThread]);
+
     return operation;
 }
 
