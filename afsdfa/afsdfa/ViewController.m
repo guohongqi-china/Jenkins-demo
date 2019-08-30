@@ -17,7 +17,7 @@
 #import "VNRequestOperation.h"
 #import "ViewManager.h"
 #import "VehicleControl.h"
-
+#import "UIView+Category.h"
 
 @interface ViewController ()
 {
@@ -68,8 +68,15 @@ NSInteger you = 20;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    UIView *view1 = [[UIView alloc]init];
+//    view1.cp_BKColor([UIColor redColor]).cp_frame(50, 100, 100, 100).cp_addView(self.view);
+    
 //    _ticketNumber = 100;
     
+    UIView *view1 = [UIView createView:^(VPropertyManager * _Nonnull manager) {
+        manager.cp_frame(50,100,100,100).cp_BKColor([UIColor redColor]).cp_addView(self.view);
+    }];
+    NSLog(@"%@",view1);
 //    //获取路径对象
 //    NSArray *pathArray = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 //    NSString *path = [pathArray objectAtIndex:0];
@@ -102,20 +109,20 @@ NSInteger you = 20;
     
 //    [self sdDemo];
 //
-    VehicleControl *control = [VehicleControl sharedSingleton];
-
-    for (int i = 0; i < 100; i++) {
-        Vehicle_STATUS status;
-        if (i%2 == 0) {
-            status = Vehicle_Normal;
-        }else{
-            status = Vehicle_UNormal;
-        }
-        [control setData:[NSNumber numberWithInteger:status] key:[NSString stringWithFormat:@"SK81234567890%d",i]];
-    }
+//    VehicleControl *control = [VehicleControl sharedSingleton];
+//
+//    for (int i = 0; i < 100; i++) {
+//        Vehicle_STATUS status;
+//        if (i%2 == 0) {
+//            status = Vehicle_Normal;
+//        }else{
+//            status = Vehicle_UNormal;
+//        }
+//        [control setData:[NSNumber numberWithInteger:status] key:[NSString stringWithFormat:@"SK81234567890%d",i]];
+//    }
     
 //
-//    [self demo8];
+    [self demo10];
 //
 //    ViewManager  *manager = [[ViewManager alloc] initWithFrame:CGRectMake(0, 200, [UIScreen mainScreen].bounds.size.width, 300)];
 //    [manager createViewMaxCells:5 sourceData:@[@"+ 9g",@"+ 8g",@"+ 5g",@"+ 3g",@"+ 4g"]];
@@ -531,7 +538,91 @@ NSInteger you = 20;
         }
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
         sleep(5);
-        dispatch_semaphore_signal(semaphore);    });
+        dispatch_semaphore_signal(semaphore);
+        
+    });
+    
+    
+}
+
+- (void)demo9{
+    dispatch_queue_t queue = dispatch_queue_create("com.guohq", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    
+    dispatch_async(queue, ^{
+        NSLog(@"111111111");
+        sleep(5);
+    });
+    
+    dispatch_async(queue, ^{
+        NSLog(@"2222222");
+        sleep(5);
+    });
+    
+    
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+
+    dispatch_async(queue, ^{
+        NSLog(@"3333333");
+        dispatch_semaphore_signal(semaphore);
+    });
+}
+
+- (void)demo10{
+    
+    dispatch_queue_t queue = dispatch_queue_create("com.guohq", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(2);
+    
+    dispatch_async(queue, ^{
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"111111");
+        sleep(5);
+        dispatch_semaphore_signal(semaphore);
+    });
+    
+    dispatch_async(queue, ^{
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+
+        NSLog(@"2222");
+        sleep(5);
+        dispatch_semaphore_signal(semaphore);
+    });
+    
+    NSLog(@"=====");
+
+    dispatch_async(queue, ^{
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"333");
+        sleep(5);
+        dispatch_semaphore_signal(semaphore);
+    });
+    
+    dispatch_async(queue, ^{
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"4444");
+        sleep(5);
+        dispatch_semaphore_signal(semaphore);
+    });
+    
+    
+    NSLog(@"------");
+    dispatch_async(queue, ^{
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"5555");
+        sleep(5);
+        dispatch_semaphore_signal(semaphore);
+    });
+    
+    dispatch_async(queue, ^{
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"66666");
+        sleep(5);
+        dispatch_semaphore_signal(semaphore);
+    });
+    
+    NSLog(@"+++++-");
+
+    
     
     
 }
