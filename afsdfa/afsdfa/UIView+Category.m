@@ -40,6 +40,14 @@
     };
 }
 
+
+- (VPropertyManager *(^)(NSString *title))cp_title{
+    return ^(NSString *title){
+      
+        return self;
+    };
+}
+
 @end
 
 
@@ -66,5 +74,7 @@
     return objc_getAssociatedObject(self, @selector(viewManager));
 }
 
-
+- (void)dealloc{
+//    NSLog(@"已销毁");
+}
 @end

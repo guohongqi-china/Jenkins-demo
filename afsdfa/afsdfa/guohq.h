@@ -14,4 +14,6 @@
 
 + (void)xhyPP;
 
+- (void)uuuuuuuu:(void(^)(void))block;
+
 @end

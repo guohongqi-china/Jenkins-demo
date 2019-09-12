@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VNRequestOperation : NSOperation<VNOperationProtocol>
+@interface VNRequestOperation : NSOperation<VNOperationProtocol,NSURLSessionDelegate>
 
 
 @end

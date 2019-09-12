@@ -13,7 +13,11 @@
 		3E2C237822F0410100B1DAF2 /* guohq.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2C237722F0410100B1DAF2 /* guohq.m */; };
 		3E4416B62318B1290074ABA1 /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4416B52318B1290074ABA1 /* UIView+Category.m */; };
 		3E4416B92318BC1F0074ABA1 /* UIView+Category1.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4416B82318BC1F0074ABA1 /* UIView+Category1.m */; };
+		3E4416BC2318EE5F0074ABA1 /* UILabel+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4416BB2318EE5F0074ABA1 /* UILabel+Category.m */; };
+		3E4416BF2318EF990074ABA1 /* VNPropertyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4416BE2318EF990074ABA1 /* VNPropertyManager.m */; };
+		3E4416C22318F18B0074ABA1 /* UIView+VNCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4416C12318F18B0074ABA1 /* UIView+VNCategory.m */; };
 		3E447E0322F95F7B000C6B13 /* VNRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E447E0122F95F7A000C6B13 /* VNRequestOperation.m */; };
+		3E452AF0231FBAD30032FAB6 /* UIViewController+yyy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E452AEF231FBAD30032FAB6 /* UIViewController+yyy.m */; };
 		3E9AA47F22F2732200AD5A53 /* MGTestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9AA47E22F2732200AD5A53 /* MGTestOperation.m */; };
 		3EE5AAA022C0A52F001F3B29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5AA9F22C0A52F001F3B29 /* AppDelegate.m */; };
 		3EE5AAA322C0A52F001F3B29 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5AAA222C0A52F001F3B29 /* ViewController.m */; };
@@ -27,6 +31,7 @@
 		3EF12E5622FA671300037123 /* BubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF12E5522FA671300037123 /* BubbleView.m */; };
 		3EF12E5922FA674400037123 /* BubbleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF12E5822FA674400037123 /* BubbleCell.m */; };
 		3EF12E5F22FABB3900037123 /* ChartLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF12E5E22FABB3900037123 /* ChartLineView.m */; };
+		3EF130D2231FDAB800161ADC /* ViewController+tttt.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF130D1231FDAB800161ADC /* ViewController+tttt.m */; };
 		3EF7A574231231AF00159A20 /* VehicleControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7A56B231231AF00159A20 /* VehicleControl.m */; };
 		3EF7A575231231AF00159A20 /* Normal.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7A56C231231AF00159A20 /* Normal.m */; };
 		3EF7A576231231AF00159A20 /* UNKnow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7A572231231AF00159A20 /* UNKnow.m */; };
@@ -62,9 +67,17 @@
 		3E4416B52318B1290074ABA1 /* UIView+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
 		3E4416B72318BC1F0074ABA1 /* UIView+Category1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Category1.h"; sourceTree = "<group>"; };
 		3E4416B82318BC1F0074ABA1 /* UIView+Category1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category1.m"; sourceTree = "<group>"; };
+		3E4416BA2318EE5F0074ABA1 /* UILabel+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Category.h"; sourceTree = "<group>"; };
+		3E4416BB2318EE5F0074ABA1 /* UILabel+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Category.m"; sourceTree = "<group>"; };
+		3E4416BD2318EF990074ABA1 /* VNPropertyManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VNPropertyManager.h; sourceTree = "<group>"; };
+		3E4416BE2318EF990074ABA1 /* VNPropertyManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VNPropertyManager.m; sourceTree = "<group>"; };
+		3E4416C02318F18B0074ABA1 /* UIView+VNCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+VNCategory.h"; sourceTree = "<group>"; };
+		3E4416C12318F18B0074ABA1 /* UIView+VNCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+VNCategory.m"; sourceTree = "<group>"; };
 		3E447E0022F95F7A000C6B13 /* VNRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VNRequestOperation.h; sourceTree = "<group>"; };
 		3E447E0122F95F7A000C6B13 /* VNRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VNRequestOperation.m; sourceTree = "<group>"; };
 		3E447E0222F95F7A000C6B13 /* VNOperationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VNOperationProtocol.h; sourceTree = "<group>"; };
+		3E452AEE231FBAD30032FAB6 /* UIViewController+yyy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+yyy.h"; sourceTree = "<group>"; };
+		3E452AEF231FBAD30032FAB6 /* UIViewController+yyy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+yyy.m"; sourceTree = "<group>"; };
 		3E47FAFC22E0C3AD00CBE8DE /* guohq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = guohq.h; sourceTree = "<group>"; };
 		3E9AA47D22F2732200AD5A53 /* MGTestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGTestOperation.h; sourceTree = "<group>"; };
 		3E9AA47E22F2732200AD5A53 /* MGTestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGTestOperation.m; sourceTree = "<group>"; };
@@ -93,6 +106,8 @@
 		3EF12E5822FA674400037123 /* BubbleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleCell.m; sourceTree = "<group>"; };
 		3EF12E5D22FABB3900037123 /* ChartLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartLineView.h; sourceTree = "<group>"; };
 		3EF12E5E22FABB3900037123 /* ChartLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartLineView.m; sourceTree = "<group>"; };
+		3EF130D0231FDAB800161ADC /* ViewController+tttt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController+tttt.h"; sourceTree = "<group>"; };
+		3EF130D1231FDAB800161ADC /* ViewController+tttt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewController+tttt.m"; sourceTree = "<group>"; };
 		3EF5C3D922FB0EE20046F353 /* AdapterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdapterProtocol.h; sourceTree = "<group>"; };
 		3EF7A56B231231AF00159A20 /* VehicleControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleControl.m; sourceTree = "<group>"; };
 		3EF7A56C231231AF00159A20 /* Normal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Normal.m; sourceTree = "<group>"; };
@@ -165,12 +180,22 @@
 				3EE5AA9F22C0A52F001F3B29 /* AppDelegate.m */,
 				3EE5AAA122C0A52F001F3B29 /* ViewController.h */,
 				3EE5AAA222C0A52F001F3B29 /* ViewController.m */,
+				3EF130D0231FDAB800161ADC /* ViewController+tttt.h */,
+				3EF130D1231FDAB800161ADC /* ViewController+tttt.m */,
+				3E452AEE231FBAD30032FAB6 /* UIViewController+yyy.h */,
+				3E452AEF231FBAD30032FAB6 /* UIViewController+yyy.m */,
 				3EF12E5322FA669D00037123 /* Component */,
 				3E447E0222F95F7A000C6B13 /* VNOperationProtocol.h */,
 				3E447E0022F95F7A000C6B13 /* VNRequestOperation.h */,
 				3E447E0122F95F7A000C6B13 /* VNRequestOperation.m */,
+				3E4416BD2318EF990074ABA1 /* VNPropertyManager.h */,
+				3E4416BE2318EF990074ABA1 /* VNPropertyManager.m */,
+				3E4416C02318F18B0074ABA1 /* UIView+VNCategory.h */,
+				3E4416C12318F18B0074ABA1 /* UIView+VNCategory.m */,
 				3E4416B42318B1290074ABA1 /* UIView+Category.h */,
 				3E4416B52318B1290074ABA1 /* UIView+Category.m */,
+				3E4416BA2318EE5F0074ABA1 /* UILabel+Category.h */,
+				3E4416BB2318EE5F0074ABA1 /* UILabel+Category.m */,
 				3E4416B72318BC1F0074ABA1 /* UIView+Category1.h */,
 				3E4416B82318BC1F0074ABA1 /* UIView+Category1.m */,
 				3E13897622F4229800CF909B /* NSThreadDemo.h */,
@@ -418,6 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E452AF0231FBAD30032FAB6 /* UIViewController+yyy.m in Sources */,
 				3EE5AAA322C0A52F001F3B29 /* ViewController.m in Sources */,
 				3E132CC72313792F00089612 /* VehicleCache.m in Sources */,
 				3EF7A577231231AF00159A20 /* UNNormal.m in Sources */,
@@ -426,6 +452,8 @@
 				3EF12E5622FA671300037123 /* BubbleView.m in Sources */,
 				3EFBDDA722C5E6CB001B2920 /* SViewController.m in Sources */,
 				3E13897822F4229800CF909B /* NSThreadDemo.m in Sources */,
+				3E4416BF2318EF990074ABA1 /* VNPropertyManager.m in Sources */,
+				3E4416BC2318EE5F0074ABA1 /* UILabel+Category.m in Sources */,
 				3E9AA47F22F2732200AD5A53 /* MGTestOperation.m in Sources */,
 				3EF12E5922FA674400037123 /* BubbleCell.m in Sources */,
 				3E4416B62318B1290074ABA1 /* UIView+Category.m in Sources */,
@@ -433,9 +461,11 @@
 				3EF7A576231231AF00159A20 /* UNKnow.m in Sources */,
 				3EF12E5F22FABB3900037123 /* ChartLineView.m in Sources */,
 				3E447E0322F95F7B000C6B13 /* VNRequestOperation.m in Sources */,
+				3EF130D2231FDAB800161ADC /* ViewController+tttt.m in Sources */,
 				3E2C237822F0410100B1DAF2 /* guohq.m in Sources */,
 				3E4416B92318BC1F0074ABA1 /* UIView+Category1.m in Sources */,
 				3EE5AAA022C0A52F001F3B29 /* AppDelegate.m in Sources */,
+				3E4416C22318F18B0074ABA1 /* UIView+VNCategory.m in Sources */,
 				3EF12E5222FA669400037123 /* ViewManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

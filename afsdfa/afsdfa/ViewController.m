@@ -18,6 +18,7 @@
 #import "ViewManager.h"
 #import "VehicleControl.h"
 #import "UIView+Category.h"
+#import "ViewController+tttt.h"
 
 @interface ViewController ()
 {
@@ -65,87 +66,25 @@ NSInteger you = 20;
     
 }
 
+
+
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+    [self exchange];
+//    [self demo11];
     
-//    UIView *view1 = [[UIView alloc]init];
-//    view1.cp_BKColor([UIColor redColor]).cp_frame(50, 100, 100, 100).cp_addView(self.view);
-    
-//    _ticketNumber = 100;
-    
-    UIView *view1 = [UIView createView:^(VPropertyManager * _Nonnull manager) {
-        manager.cp_frame(50,100,100,100).cp_BKColor([UIColor redColor]).cp_addView(self.view);
-    }];
-    NSLog(@"%@",view1);
-//    //获取路径对象
-//    NSArray *pathArray = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-//    NSString *path = [pathArray objectAtIndex:0];
-//    //获取文件的完整路径
-//    NSString *filePatch = [path stringByAppendingPathComponent:@"xiaoxi.plist"];
-//    //上面3句可以写成这一句//
-////    NSString *filePatch = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0]stringByAppendingPathComponent:@"xiaoxi.plist"];
-//    //    NSLog(@"------filepath---%@",filePatch);
-//    /**
-//     下面是我的plist路径,在桌面空白处点击一下，前往－按住option-资源库-Developer-CoreSimulator-Devices......就按照下面路径找到plist所在的位置
-//     /Users/baiteng01/Library/Developer/CoreSimulator/Devices/92444384-5241-4934-B078-1A7241F1B687/data/Containers/Data/Application/73005382-D1FB-4BC2-BB4E-1FBC64284141/Documents/xiaoxi.plist
-//     */
-//    //写入数据到plist文件
-//    NSMutableDictionary *dic1 = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"100",@"name",nil];
-//   //写入plist里面
-//
-//    [dic1 writeToFile:filePatch atomically:YES];        //读取plist文件的内容
-//    NSMutableDictionary *dataDictionary = [[NSMutableDictionary alloc] initWithContentsOfFile:filePatch];
-//    NSLog(@"---plist一开始保存时候的内容---%@",dataDictionary);
-    
-//    [self readLocalData];
-    
-//    NSOperationQueue *queue = [[NSOperationQueue alloc]init];
-//    queue.name              = @"com.guohq";
-//    queue.maxConcurrentOperationCount   = 2;
-    
-//    _dataArr = [NSMutableDictionary dictionary];
-//    [self demo7];
-    
-    
-//    [self sdDemo];
-//
-//    VehicleControl *control = [VehicleControl sharedSingleton];
-//
-//    for (int i = 0; i < 100; i++) {
-//        Vehicle_STATUS status;
-//        if (i%2 == 0) {
-//            status = Vehicle_Normal;
-//        }else{
-//            status = Vehicle_UNormal;
-//        }
-//        [control setData:[NSNumber numberWithInteger:status] key:[NSString stringWithFormat:@"SK81234567890%d",i]];
-//    }
-    
-//
-    [self demo10];
-//
-//    ViewManager  *manager = [[ViewManager alloc] initWithFrame:CGRectMake(0, 200, [UIScreen mainScreen].bounds.size.width, 300)];
-//    [manager createViewMaxCells:5 sourceData:@[@"+ 9g",@"+ 8g",@"+ 5g",@"+ 3g",@"+ 4g"]];
-//    [manager createLineView:@[
-//                              @{@"vertical":@[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11"],
-//                                @"sourceData":@[@(12), @(2),@(600),@(27.4),@(37),@(29.7),@(27.4),@(212.4),@(127.4),@(27.4),@(227.4)]
-//                              },
-//                              @{@"vertical":@[@"1",@"2",@"3",@"4",@"5",@"6",],
-//                                @"sourceData":@[@(12), @(2),@(200),@(27.4),@(37),@(22),@(29.7),@(27.4)]
-//                              }
-//                            ]];
-//    [manager loadView:SUBVIEW_LINE];
-//    [self.view addSubview:manager.parentView];
-//
-//
-//
-//    NSLog(@"%lu",sizeof(manager));
-//
-    
-    return;
-    SControl = [[SViewController alloc]init];
-    
-    
+}
+
+- (void)exchange{
+    NSLog(@"+++");
+}
+
+
+
+
+- (void)new_viewLoad{
+//    [self demo12];
 }
 
 - (int(^)(int))muitle:(int)name{
@@ -163,7 +102,8 @@ NSInteger you = 20;
 
 - (IBAction)asdfasdfa:(id)sender {
     
-    [_imageView4 sd_setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564562913515&di=a62057f48fec12ebc79af444b382347a&imgtype=0&src=http%3A%2F%2F2f.zol-img.com.cn%2Fproduct%2F13_800x600%2F889%2FcenhT9t4pgRg.jpg"]];
+    [self viewDidLoad];
+//    [_imageView4 sd_setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564562913515&di=a62057f48fec12ebc79af444b382347a&imgtype=0&src=http%3A%2F%2F2f.zol-img.com.cn%2Fproduct%2F13_800x600%2F889%2FcenhT9t4pgRg.jpg"]];
     
 }
 
@@ -576,6 +516,7 @@ NSInteger you = 20;
     dispatch_async(queue, ^{
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
         NSLog(@"111111");
+        NSLog(@"555 == %@",[NSThread currentThread]);
         sleep(5);
         dispatch_semaphore_signal(semaphore);
     });
@@ -584,6 +525,7 @@ NSInteger you = 20;
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
 
         NSLog(@"2222");
+        NSLog(@"222 == %@",[NSThread currentThread]);
         sleep(5);
         dispatch_semaphore_signal(semaphore);
     });
@@ -594,12 +536,14 @@ NSInteger you = 20;
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
         NSLog(@"333");
         sleep(5);
+        NSLog(@"222 == %@",[NSThread currentThread]);
         dispatch_semaphore_signal(semaphore);
     });
     
     dispatch_async(queue, ^{
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
         NSLog(@"4444");
+        NSLog(@"222 == %@",[NSThread currentThread]);
         sleep(5);
         dispatch_semaphore_signal(semaphore);
     });
@@ -609,6 +553,7 @@ NSInteger you = 20;
     dispatch_async(queue, ^{
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
         NSLog(@"5555");
+        NSLog(@"222 == %@",[NSThread currentThread]);
         sleep(5);
         dispatch_semaphore_signal(semaphore);
     });
@@ -616,15 +561,197 @@ NSInteger you = 20;
     dispatch_async(queue, ^{
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
         NSLog(@"66666");
+        NSLog(@"222 == %@",[NSThread currentThread]);
         sleep(5);
         dispatch_semaphore_signal(semaphore);
     });
     
     NSLog(@"+++++-");
 
+}
+
+- (void)demo11{
+    dispatch_queue_t queue = dispatch_queue_create("com.guohq", DISPATCH_QUEUE_CONCURRENT);
     
+    dispatch_sync(queue, ^{
+        for (int i = 0; i<100; i++) {
+            NSLog(@"444 %d == %@",i,[NSThread currentThread]);
+        }
+        sleep(1);
+        NSLog(@"第一个走完了");
+    });
+    NSLog(@"+++++-");
+
+    dispatch_sync(queue, ^{
+        for (int i = 0; i<100; i++) {
+            NSLog(@"555 %d == %@",i,[NSThread currentThread]);
+        }
+        sleep(1);
+        NSLog(@"第二个走完了");
+    });
+    NSLog(@"=====");
+    dispatch_sync(queue, ^{
+        for (int i = 0; i<100; i++) {
+            NSLog(@"666 %d == %@",i,[NSThread currentThread]);
+        }
+        sleep(1);
+        NSLog(@"第三个走完了");
+    });
+}
+
+- (void)demo12{
+    dispatch_queue_t queue = dispatch_queue_create("com.guohq", DISPATCH_QUEUE_SERIAL);
     
+    dispatch_async(queue, ^{
+        for (int i = 0; i<5; i++) {
+            NSLog(@"444 %d == %@",i,[NSThread currentThread]);
+        }
+        sleep(1);
+        NSLog(@"第一个走完了");
+    });
+    NSLog(@"+++++-");
+    
+    dispatch_async(queue, ^{
+        for (int i = 0; i<5; i++) {
+            NSLog(@"555 %d == %@",i,[NSThread currentThread]);
+        }
+        sleep(1);
+        NSLog(@"第二个走完了");
+    });
+    NSLog(@"=====");
+    dispatch_async(queue, ^{
+        for (int i = 0; i<5; i++) {
+            NSLog(@"666 %d == %@",i,[NSThread currentThread]);
+        }
+        sleep(1);
+        NSLog(@"第三个走完了");
+        
+    });
+    NSLog(@"+++");
+
+}
+
+
+- (void)demo13{
+    dispatch_queue_t serialQueue = dispatch_queue_create("com.guohq", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t concurrentQueue = dispatch_queue_create("com.guohq", DISPATCH_QUEUE_CONCURRENT);
+
+    NSLog(@"============serialQueue==============");
+    
+    for (int i = 0; i< 10; i++) {
+        dispatch_async(serialQueue, ^{
+            NSLog(@"serialQueue === %d +++ %@",i,[NSThread currentThread]);
+        });
+    }
+    
+    NSLog(@"============concurrentQueue==============");
+
+    for (int i = 0; i< 10; i++) {
+        dispatch_async(concurrentQueue, ^{
+            NSLog(@"concurrentQueue === %d +++ %@",i,[NSThread currentThread]);
+        });
+    }
+
+}
+
+- (void)demo14{
+    
+    dispatch_queue_t queue = dispatch_queue_create("com.guohq", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_queue_t serialQueue = dispatch_queue_create("com.guohq1", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(queue, ^{
+        NSLog(@"============serialQueue==============");
+        for (int i = 0; i< 100; i++) {
+            dispatch_async(serialQueue, ^{
+                NSLog(@"serialQueue === %d +++ %@",i,[NSThread currentThread]);
+            });
+        }
+        NSLog(@"当前线程%@",[NSThread currentThread]);
+        NSLog(@"============concurrentQueue==============");
+        for (int i = 0; i< 10; i++) {
+            dispatch_async(serialQueue, ^{
+                NSLog(@"concurrentQueue === %d +++ %@",i,[NSThread currentThread]);
+            });
+        }
+    });
+}
+
+/// 文件下载
+- (void)NSURLSessionDownloadTaskTest { // 1.创建url
+    NSOperationQueue *queue = [[NSOperationQueue alloc]init];
+    queue.name              = @"com.guohq";
+    queue.maxConcurrentOperationCount   = 2;
+    
+    VNRequestOperation<VNOperationProtocol> *requestOperation1 = [[VNRequestOperation alloc]initOperationWithTask:^{
+        
+        guohq *uu = [guohq new];
+        [uu uuuuuuuu:^{
+            NSLog(@"++++========%@",[NSThread currentThread]);
+        }];
+        
+    }];
+    
+    [queue addOperation:requestOperation1];
     
 }
 
 @end
+
+
+
+/*
+ 
+ //     下面是我的plist路径,在桌面空白处点击一下，前往－按住option-资源库-Developer-CoreSimulator-Devices......就按照下面路径找到plist所在的位置
+ //     /Users/baiteng01/Library/Developer/CoreSimulator/Devices/92444384-5241-4934-B078-1A7241F1B687/data/Containers/Data/Application/73005382-D1FB-4BC2-BB4E-1FBC64284141/Documents/xiaoxi.plist
+ //     */
+//    //写入数据到plist文件
+//    NSMutableDictionary *dic1 = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"100",@"name",nil];
+//   //写入plist里面
+//
+//    [dic1 writeToFile:filePatch atomically:YES];        //读取plist文件的内容
+//    NSMutableDictionary *dataDictionary = [[NSMutableDictionary alloc] initWithContentsOfFile:filePatch];
+//    NSLog(@"---plist一开始保存时候的内容---%@",dataDictionary);
+
+//    [self readLocalData];
+
+//    NSOperationQueue *queue = [[NSOperationQueue alloc]init];
+//    queue.name              = @"com.guohq";
+//    queue.maxConcurrentOperationCount   = 2;
+
+//    _dataArr = [NSMutableDictionary dictionary];
+//    [self demo7];
+
+
+//    [self sdDemo];
+//
+//    VehicleControl *control = [VehicleControl sharedSingleton];
+//
+//    for (int i = 0; i < 100; i++) {
+//        Vehicle_STATUS status;
+//        if (i%2 == 0) {
+//            status = Vehicle_Normal;
+//        }else{
+//            status = Vehicle_UNormal;
+//        }
+//        [control setData:[NSNumber numberWithInteger:status] key:[NSString stringWithFormat:@"SK81234567890%d",i]];
+//    }
+
+//
+//
+//    ViewManager  *manager = [[ViewManager alloc] initWithFrame:CGRectMake(0, 200, [UIScreen mainScreen].bounds.size.width, 300)];
+//    [manager createViewMaxCells:5 sourceData:@[@"+ 9g",@"+ 8g",@"+ 5g",@"+ 3g",@"+ 4g"]];
+//    [manager createLineView:@[
+//                              @{@"vertical":@[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11"],
+//                                @"sourceData":@[@(12), @(2),@(600),@(27.4),@(37),@(29.7),@(27.4),@(212.4),@(127.4),@(27.4),@(227.4)]
+//                              },
+//                              @{@"vertical":@[@"1",@"2",@"3",@"4",@"5",@"6",],
+//                                @"sourceData":@[@(12), @(2),@(200),@(27.4),@(37),@(22),@(29.7),@(27.4)]
+//                              }
+//                            ]];
+//    [manager loadView:SUBVIEW_LINE];
+//    [self.view addSubview:manager.parentView];
+//
+//
+//
+//    NSLog(@"%lu",sizeof(manager));
+//
+

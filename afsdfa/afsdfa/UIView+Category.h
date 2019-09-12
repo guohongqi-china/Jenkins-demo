@@ -24,6 +24,10 @@ NS_ASSUME_NONNULL_BEGIN
 // 添加view
 - (VPropertyManager *(^)(UIView *parentView))cp_addView;
 
+
+- (VPropertyManager *(^)(NSString *title))cp_title;
+
+
 @end;
 
 
